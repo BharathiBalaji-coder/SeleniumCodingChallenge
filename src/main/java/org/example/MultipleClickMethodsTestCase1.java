@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class MultipleClickMethods {
+public class MultipleClickMethodsTestCase1 {
 
     public static void main(String[] args) throws InterruptedException {
         //Testcase:1
@@ -51,8 +51,7 @@ public class MultipleClickMethods {
         createAccount.click();
         System.out.println("create account has been clicked successfully");
         //Step 12: close the browser
-        //driver.close();
-
+        driver.close();
 
     }
 }
