@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 import java.util.Arrays;
 
-public class BrowserCapabilities {
+public class Day2BrowserCapabilities {
     public static void main(String[] args) {
         //step1 :Open your preferred web browser
         //Create an instance of ChromeOptions class

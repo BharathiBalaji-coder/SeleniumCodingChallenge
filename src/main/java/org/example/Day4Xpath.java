@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
-public class Xpath {
+public class Day4Xpath {
 
     public static void main(String[] args) {
         //step1 :Open your preferred web browser

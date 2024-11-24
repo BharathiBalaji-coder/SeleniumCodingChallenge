@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class MultipleClickMethodsTestCase1 {
+public class Day5MultipleClickMethodsTestCase1 {
 
     public static void main(String[] args) throws InterruptedException {
         //Testcase:1

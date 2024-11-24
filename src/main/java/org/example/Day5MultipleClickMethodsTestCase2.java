@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class MultipleClickMethodsTestCase2 {
+public class Day5MultipleClickMethodsTestCase2 {
 
     public static void main(String[] args) {
 

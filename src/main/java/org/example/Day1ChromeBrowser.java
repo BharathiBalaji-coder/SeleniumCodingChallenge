@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class ChromeBrowser {
+public class Day1ChromeBrowser {
     public static void main(String[] args) {
         //Launch Chrome browser in 3 different ways
         //method1 : get

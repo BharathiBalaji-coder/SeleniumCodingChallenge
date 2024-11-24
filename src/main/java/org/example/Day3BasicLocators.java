@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.time.Duration;
 import java.util.List;
 
-public class BasicLocators {
+public class Day3BasicLocators {
 
     public static void main(String[] args) {
 
