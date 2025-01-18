@@ -4,6 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Day20Authentication {
+    /*
+    HANDLE BASIC AUTHENTICATION USING SELENIUM
+Step1: Open your preferred web browser
+Step2: Navigate to the URL: https://the-intenet.herokuapp.com/basic_auth
+Step3: Need to handle the Authentication username “admin” password “admin”
+Step4: Print the title of the web page to the console
+
+     */
 
     public static void main(String[] args) {
 

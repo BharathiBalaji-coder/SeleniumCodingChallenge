@@ -10,6 +10,13 @@ import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 
 public class Day5MultipleClickMethodsTestCase3 {
+    /*
+    TESTCASE3:
+Step1: Launch the Browser and Load the URL https://petdiseasealerts.org/forecast-map#/.
+Step2: Select Tick Borne disease under Heart Worm
+Step3: Close the Browser
+
+     */
 
     public static void main(String[] args) throws InterruptedException {
 

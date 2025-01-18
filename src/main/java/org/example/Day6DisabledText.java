@@ -11,6 +11,18 @@ import java.time.Duration;
 
 public class Day6DisabledText {
 
+    /*
+    VERIFY THE DISABLED TEXT FIELD BY USING SELENIUM WEBDRIVER
+Step1: Load the URL
+Step2: Open your preferred browser
+Step3: Navigate to the URL: https://codepen.io/unknownUser7/pen/gOJEeRM
+Step4: Click on the Change View Icon
+Step5: Click on the first view option from the available choices
+Step6: Verify the text field for Confirm Email and Confirm Password is disabled
+Step7: Retrieve and Print the Confirm Email and Confirm Password
+
+     */
+
     public static void main(String[] args) throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
         //Step 2: Handle the notifications Add chrome switch to disable notification - "**--disable-notifications**"

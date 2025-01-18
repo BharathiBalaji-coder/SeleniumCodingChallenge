@@ -12,6 +12,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Day5MultipleClickMethodsTestCase1 {
+   /*
+   TESTCASE 1:
+Step1: Launch the Browser and Load the URL https://my.aidaform.com/signup
+Step2: Enter the Username, Email id, Password, Confirm Password
+Step3: Click Create My Free Account button to submit the form
+Step4: Close the Browser
+
+    */
 
     public static void main(String[] args) throws InterruptedException {
         //Testcase:1

@@ -12,6 +12,17 @@ import org.openqa.selenium.support.ui.Select;
 import java.time.Duration;
 
 public class Day8DropDown {
+    /*
+    AUTOMATE THE FOLLOWING TEST CASE TO HANDLE THE DROPDOWN USING THE SELECT CLASS
+Step1: Launch the Browser and Load URL as https:// wwwtelerik.co/contact
+Step2: Select “Invoice/Billing” from the first dropdown using Select By Value
+Step3: Choose “Testing Framework” from the dropdown
+Step4: Enter ‘Your First Name” in the first name field
+Step5: Enter “Your Last Name” in the last name field
+Step6: Select “United States” from the country dropdown using Select By Index
+Step7: Quit the driver
+
+     */
     public static void main(String[] args) throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");

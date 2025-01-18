@@ -9,7 +9,16 @@ import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 
 public class Day7ToolTip {
+  /*
+  RETRIEVE THE TOOL TIP MESSAGE BY USING SELENIUM WEBDRIVER
+Step1: Load the URL
+Step2: Open your preferred web browser
+Step3: Navigate to the URL: https://www.mapz.com/map
+Step4: Click on the Draw tab from the right-side menu
+Step5: Mouse Hover on the Email input field
+Step6: Retrieve and print the tooltip message “Please fill out this field “
 
+   */
     public static void main(String[] args) throws InterruptedException {
 //step1 :Open your preferred web browser
         WebDriver driver = new ChromeDriver();
