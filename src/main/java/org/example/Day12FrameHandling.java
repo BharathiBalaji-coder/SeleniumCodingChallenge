@@ -42,7 +42,7 @@ public class Day12FrameHandling {
         password.click();
         password.sendKeys("pass");
         //Step 5:click on login button
-        WebElement loginBtn = driver.findElement(By.xpath("//*[@id='loginForm']/button"));
+        WebElement loginBtn = driver.findElement(By.xpath("//button[text()='Login']"));
         loginBtn.click();
         System.out.println("Login button has been clicked successfully");
         //Step 6:Alert Handling

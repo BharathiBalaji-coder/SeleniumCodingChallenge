@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class Day7ToolTip {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 //step1 :Open your preferred web browser
         WebDriver driver = new ChromeDriver();
         //Step 2:Go to mapz website
@@ -22,17 +22,14 @@ public class Day7ToolTip {
         WebElement drawMenu = driver.findElement(By.xpath("//a[normalize-space()='Draw']"));
         drawMenu.click();
         System.out.println("Draw menu has been clicked successfully");
-        Actions actions = new Actions(driver);
-        WebElement element = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div/div/div[2]/form/div/div[2]/div/input"));
-        actions.moveToElement(element).perform();
-        WebElement toolTip = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div/div/div[2]/form/div/div[2]/div/input"));
-        String toolTipText = toolTip.getText();
-        System.out.println("toolTipText-->" + toolTipText);
-        if (toolTipText.equalsIgnoreCase("Please fill out this field.")) {
-            System.out.println("Pass");
-        } else {
-            System.out.println("Fail");
-        }
+        Thread.sleep(2000);
 
+
+        WebElement element = driver.findElement(By.name("email"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();
+
+        String toolTipText =element.getAttribute("validationMessage");
+        System.out.println("Tooltip message: " + toolTipText);
     }
 }

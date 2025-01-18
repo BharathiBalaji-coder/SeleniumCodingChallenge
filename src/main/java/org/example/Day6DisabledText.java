@@ -1,9 +1,11 @@
 package org.example;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
 
 import java.time.Duration;
 
@@ -22,14 +24,14 @@ public class Day6DisabledText {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-        Thread.sleep(8000);
         //click on the change view icon
         driver.findElement(By.id("view-switcher-button")).click();
         driver.findElement(By.id("left-layout")).click();
-        boolean confirmEmail = driver.findElement(By.id("confirmEmail")).isEnabled();
-        System.out.println(confirmEmail);
-        boolean confirmPassword = driver.findElement(By.id("confirmPassword")).isEnabled();
-        System.out.println(confirmPassword);
+        driver.switchTo().frame("result");
+        Assert.assertTrue(driver.findElement(By.id("confirmEmail")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("confirmPassword")).isDisplayed());
+        System.out.println("Default value of the 'Confirm Email' Text Field in the Sign Up Form: "+driver.findElement(By.id("confirmEmail")).getAttribute("value"));
+        System.out.println("Default value of the 'Confirm Password' Text Field in the Sign Up Form: "+driver.findElement(By.id("confirmPassword")).getAttribute("value"));
 
     }
 }

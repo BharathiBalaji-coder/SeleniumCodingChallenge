@@ -30,6 +30,7 @@ public class Day5MultipleClickMethodsTestCase3 {
 
         WebElement tickBorneDiseaseOption = driver.findElement(By.xpath("//span[text()='Tick Borne Disease Agents']"));
         act.moveToElement(tickBorneDiseaseOption).click(tickBorneDiseaseOption).perform();
+        System.out.println("Clicked on Tick Borne Disease Agents");
        //close the browser
         driver.quit();
 

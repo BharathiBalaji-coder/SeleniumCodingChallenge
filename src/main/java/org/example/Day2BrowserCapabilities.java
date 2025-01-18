@@ -11,6 +11,22 @@ import java.util.Arrays;
 
 public class Day2BrowserCapabilities {
     public static void main(String[] args) {
+
+        /**
+         * Selenium July Month Challenge - Week01 Day02
+         *
+         * TestCase:
+         *
+         * 1. Launch the Browser and Load the URL "https://www.spicejet.com/".
+         * 2. Handle the Notification.
+         * 3. Resize your Browser Window. (1200,800)
+         * 4. Remove info of Chrome is being controlled by automated software.
+         * 5. Get the text of "Flights".
+         * 6. Print title of the page,
+         * 7. Close the browser.
+         *
+         */
+
         //step1 :Open your preferred web browser
         //Create an instance of ChromeOptions class
         ChromeOptions options = new ChromeOptions();
