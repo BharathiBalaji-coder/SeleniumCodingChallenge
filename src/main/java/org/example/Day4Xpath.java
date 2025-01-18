@@ -10,6 +10,21 @@ import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 
 public class Day4Xpath {
+    /*
+     * Automate the following Test case using only XPATH
+     *
+     * TESTCASE: Verify Adding Floor-Standing Cloth Rack to Cart and Retrieving Subtotal
+     *
+     * > Launch the browser and Load URL as "https://www.cartify.pk"
+     * > Click on "Shop By Categories"
+     * > Click on "Cloth Rack" category
+     * > Click on the "Floor-Standing Clock Rack With Wheels" item
+     * > Add the item to the cart
+     * > Click on Add to cart
+     * > Retrieve the "subtotal price"
+     * > Quit the driver
+     *
+     */
 
     public static void main(String[] args) {
         //step1 :Open your preferred web browser
