@@ -74,7 +74,7 @@ public class Day3BasicLocators {
                 System.out.println(string);
             }
         }
-
+       driver.quit();
 
     }
 }
