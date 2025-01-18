@@ -35,6 +35,6 @@ public class Day2BrowserCapabilities {
         String pageTitle = driver.getTitle();
         System.out.println(pageTitle);
         //step 9 : Close the browser
-        driver.close();
+        driver.quit();
     }
 }

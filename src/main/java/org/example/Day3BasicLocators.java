@@ -34,23 +34,25 @@ public class Day3BasicLocators {
         String text = options.get(size - 1).getText();
         System.out.println(text);
         city.selectByVisibleText(text);
-        // Click on the Safety section.
-        driver.findElement(By.partialLinkText("SAFETY")).click();
-        // Print the description under the Safety section.
-        String technology = driver.findElement(By.className("caption- text")).getText();
-        System.out.println("Technology Describtion " + technology);
-        // Click on the Colours section.
-        driver.findElement(By.partialLinkText("COLOURS")).click();
-        // Print the currently selected color.
-        String carColor = driver.findElement(By.tagName("small")).getAttribute("class");
-        System.out.println("Car Color with attribute value " + carColor);
-        String[] split = carColor.split("-");
-        for (String string : split) {
-            if (string.equals("red") || string.equals("black")) {
-                System.out.println(string);
-            }
+        // Step 8: Click on the Safety section
+        driver.findElement(By.id("safety")).click();
 
-        }
+        // Step 9: Print the description under the Safety section
+        WebElement safetyDescription = driver.findElement(By.id("safety-description"));
+        System.out.println("Safety Description: " + safetyDescription.getText());
+
+        // Step 10: Click on the colors section
+        driver.findElement(By.id("colors")).click();
+
+        // Step 11: Print the currently selected color
+        WebElement selectedColor = driver.findElement(By.className("selected-color"));
+        System.out.println("Currently Selected Color: " + selectedColor.getText());
+
+
+
+
+
+
 
 
     }

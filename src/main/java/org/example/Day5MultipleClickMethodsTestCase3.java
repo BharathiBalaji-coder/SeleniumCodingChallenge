@@ -1,6 +1,7 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,15 +20,18 @@ public class Day5MultipleClickMethodsTestCase3 {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-        Thread.sleep(5000);
-        //driver.switchTo().frame("map-instance-50092");
-        WebElement ele = driver.findElement(By.xpath("//a[text()='Intestinal Parasites']"));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(ele).perform();
-        //Select tickborneagentsoption under Intestinal Parasites Menu
-        WebElement tickBorneAgentsOption = driver.findElement(By.xpath("//option[contains(text(), 'Tick Borne Agents')]"));
-        tickBorneAgentsOption.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,200)");
+        WebElement frame = driver.findElement(By.xpath("//iframe[contains(@id,'map-instance')]"));
+        driver.switchTo().frame(frame);
+        WebElement intestinalParasite = driver.findElement(By.xpath("//a[text()='Intestinal Parasites']"));
+        Actions act = new Actions(driver);
+        act.moveToElement(intestinalParasite).perform();
 
+        WebElement tickBorneDiseaseOption = driver.findElement(By.xpath("//span[text()='Tick Borne Disease Agents']"));
+        act.moveToElement(tickBorneDiseaseOption).click(tickBorneDiseaseOption).perform();
+       //close the browser
+        driver.quit();
 
     }
 

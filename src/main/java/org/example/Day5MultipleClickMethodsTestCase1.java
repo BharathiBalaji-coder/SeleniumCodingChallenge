@@ -51,7 +51,7 @@ public class Day5MultipleClickMethodsTestCase1 {
         createAccount.click();
         System.out.println("create account has been clicked successfully");
         //Step 12: close the browser
-        driver.close();
+        driver.quit();
 
     }
 }

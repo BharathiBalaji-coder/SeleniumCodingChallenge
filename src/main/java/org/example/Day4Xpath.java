@@ -50,7 +50,7 @@ public class Day4Xpath {
         System.out.println(price);
 
         //Step 8: close the browser
-        driver.close();
+        driver.quit();
 
     }
 }

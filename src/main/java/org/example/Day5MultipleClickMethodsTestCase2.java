@@ -24,6 +24,6 @@ public class Day5MultipleClickMethodsTestCase2 {
         String pageTitle = driver.getTitle();
         System.out.println(pageTitle);
         //Step 3: close the browser
-        driver.close();
+        driver.quit();
     }
 }
