@@ -67,7 +67,7 @@ public class Day3BasicLocators {
         System.out.println("colours section is clicked");
         // Print the currently selected color.
         String carColor = driver.findElement(By.tagName("small")).getAttribute("class");
-        System.out.println("Car Color with attribute value " + carColor);
+        System.out.println("Selected Car Color: " + carColor);
         String[] split = carColor.split("-");
         for (String string : split) {
             if (string.equals("red") || string.equals("black")) {
