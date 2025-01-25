@@ -1,5 +1,6 @@
 package org.example;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -28,9 +29,10 @@ public class Day4Xpath {
 
     public static void main(String[] args) {
         //step1 :Open your preferred web browser
-        //WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
 
+
+//        // Instantiate a ChromeDriver class.
+        WebDriver driver = new ChromeDriver();
         //Step 2:Go to cartify.pk
         driver.get("https://www.cartify.pk/");
         driver.manage().window().maximize();
