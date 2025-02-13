@@ -1,4 +1,4 @@
-package org.example;
+package org.seleniumcodingchallenge;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;

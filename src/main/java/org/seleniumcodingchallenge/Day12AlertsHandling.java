@@ -1,4 +1,4 @@
-package org.example;
+package org.seleniumcodingchallenge;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
