@@ -1,4 +1,4 @@
-package Week03HomeAssignments;
+package Week03HomeAssignmentsDay01;
 
 import java.util.Arrays;
 

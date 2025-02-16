@@ -1,9 +1,6 @@
 package org.seleniumcodingchallenge;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,7 +36,7 @@ Step4: Quit the driver
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         // Step 2: Click on the first result under the Key Series
         // Click on the first result under the Key Series
-        WebElement firstSeries = driver.findElement(By.xpath("//span[text()='India vs England']"));
+        WebElement firstSeries = driver.findElement(By.xpath("(//span[text()='India vs England'])[2]"));
         firstSeries.click();
 
         //Step 4: Quit the driver
