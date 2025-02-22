@@ -1,6 +1,7 @@
 package SeleniumHomeAssignments;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,59 +33,78 @@ public class PVR {
 
     public static void main(String[] args) throws InterruptedException {
 
-        ChromeDriver driver = new ChromeDriver();
+        // 1) Launch the Browser
+        WebDriver driver = new ChromeDriver();
         driver.get("https://www.pvrcinemas.com/");
         driver.manage().window().maximize();
-        driver.findElement(By.xpath("//input[@type='text' and @placeholder='Search for city']")).sendKeys("Chennai");
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[text()='Chennai']")).click();
-        driver.findElement(By.xpath("//span[text()='Cinema']")).click();
-        driver.findElement(By.xpath("//span[text()='Select Cinema']")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("(//div[@class='p-dropdown-items-wrapper']//span)[3]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("(//li[@class='p-dropdown-item'])[2]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("(//li[@class='p-dropdown-item'])[2]")).click();
-
-        // Select Your Show Time
-        Thread.sleep(500);
-        driver.findElement(By.xpath("(//li[@class='p-dropdown-item'])[3]")).click();
-
-        // Click on Book Button
-        driver.findElement(By.xpath("//button[@aria-label='Submit']")).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        // Click Accept on Term and Condition
-        driver.findElement(By.xpath("//button[text()='Accept']")).click();
-
-        // Click any one available seat
-        driver.findElement(By.xpath("(//span[contains(@id,'CLUB') and @class='seat-current-pvr'])[1]")).click();
-
-        // Click Proceed Button
-        driver.findElement(By.xpath("//button[text()='Proceed']")).click();
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        //2)Click on cinema under Quick Book
+        WebElement cinema =driver.findElement(By.xpath("//span[text()='Cinema']"));
+        cinema.click();
+        //3) select cinema
+        WebElement selectCinema = driver.findElement(By.xpath("//span[text()='Select Cinema']"));
+        selectCinema.click();
+        WebElement selectCinemaLocation = driver.findElement(By.xpath("//span[normalize-space()='INOX National,Virugambakkam Chennai']"));
+        selectCinemaLocation.click();
+        Thread.sleep(2000);
+        //4) Select Your Date as Tomorrow
+        WebElement selectDate= driver.findElement(By.xpath("(//li[@class='p-dropdown-item'])[2]"));
+        selectDate.click();
+        Thread.sleep(2000);
+        //5) Select Your Movie
+        WebElement selectMovie = driver.findElement(By.xpath("(//li[@class='p-dropdown-item'])[1]"));
+        selectMovie.click();
+        Thread.sleep(2000);
+        //6) Select Your Show Time
+        WebElement selectShowTime = driver.findElement(By.xpath("(//li[@class='p-dropdown-item'])[1]"));
+        selectShowTime.click();
+        Thread.sleep(4000);
+        //7) Click on Book Button
+        WebElement bookButton = driver.findElement(By.xpath("//button[@aria-label='Submit']//span[@class='p-button-label p-c'][normalize-space()='Book']"));
+        bookButton.click();
+        Thread.sleep(2000);
+        //8) Click Accept on Term and Condition
+        WebElement acceptButton = driver.findElement(By.xpath("//button[text()='Accept']"));
+        acceptButton.click();
+        Thread.sleep(2000);
+        //9) Click any one available seat
+        WebElement selectSeat = driver.findElement(By.xpath("//*[@id='SL.SILVER|C:14']"));
+        selectSeat.click();
+        Thread.sleep(2000);
+        //10) Click Proceed Button
+        WebElement proceedButton = driver.findElement(By.xpath("//button[normalize-space()='Proceed']"));
+        proceedButton.click();
         // Print the Seat info under book summary
         WebElement seatNumber = driver.findElement(By.xpath("//div[@class='seat-number']/p"));
         System.out.println("Seat Number Selected is : " + seatNumber.getText());
-
+        Thread.sleep(2000);
         // Print the grand total under book summary
         WebElement grandTotal = driver.findElement(By.xpath("//div[@class='grand-tota col-md-3']//span"));
         String grandTotal1 = grandTotal.getText();
         System.out.println("Grand Total is : ₹" + grandTotal1);
-
+        Thread.sleep(2000);
         // Click Proceed Button
         driver.findElement(By.xpath("//button[text()='Proceed']")).click();
-
+          Thread.sleep(2000);
         // Close the popup
-        Thread.sleep(500);
+
         driver.findElement(By.xpath("(//i[@class='pi pi-times'])[2]")).click();
 
         // Print Your Current Page title
         System.out.println("Current Page Title is : " + driver.getTitle());
 
         // Close the browser
-        driver.close();
+        driver.quit();
+
+
+
+
+
+
+
+
+
+
 
     }
 }
