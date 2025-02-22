@@ -17,20 +17,26 @@ there is a gap in the sequence of numbers
 
      */
 
+    public static int findMissingElement(int[] arr){
+
+        int n=arr.length+1;
+        int totalSum=n*(n+1)/2;
+        int arraySum =0;
+        for(int i=0;i<arr.length;i++){
+            arraySum+=arr[i];
+        }
+        return totalSum-arraySum;
+
+
+
+    }
+
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 3, 4, 10, 6, 8};
+        int[] arr = {1, 2, 3,5};
 
-        // Sort the array
-        Arrays.sort(arr);
+        int missingElement =findMissingElement(arr);
+        System.out.println("Missing Element is: "+missingElement);
 
-        // Find and print the missing elements
-        for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] + 1 != arr[i + 1]) {
-                for (int j = arr[i] + 1; j < arr[i + 1]; j++) {
-                    System.out.println("Missing element: " + j);
-                }
-            }
-        }
     }
 }
