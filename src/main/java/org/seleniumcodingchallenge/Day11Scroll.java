@@ -33,18 +33,17 @@ Step4: Quit the driver
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
         //Step 2 :implementation of javascript executor and click on the first result under key series
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+        Actions act= new Actions(driver);
+        act.moveToElement(driver.findElement(By.xpath("//h2[text()='Key Series']"))).perform();
         // Step 2: Click on the first result under the Key Series
         // Click on the first result under the Key Series
-
-        Actions actions = new Actions(driver);
-        WebElement spotlight = driver.findElement(By.xpath("//span[text()='Spotlight']"));
-        actions.moveToElement(spotlight).perform();
-        Thread.sleep(2000);
-        WebElement keySeries = driver.findElement(By.xpath("(//h2[text()='Key Series']/following::span)[2]"));
-        JavascriptExecutor j = (JavascriptExecutor) driver;
-        j.executeScript("arguments[0].click();", keySeries);
+        WebElement firstResult=driver.findElement(By.xpath("(//span[@class='ds-text-tight-m ds-font-regular'])[11]"));
+        firstResult.click();
+        driver.navigate().refresh();
+        //Step 3: Print the text of the first resulting ad
+        WebElement firstResultAd=driver.findElement(By.xpath("//h2[@class='ds-text-title-xl ds-font-bold ds-text-raw-white']"));
+        String adText=firstResultAd.getText();
+        System.out.println("The text of the first resulting ad is: " + adText);
         //Step 4: Quit the driver
         // driver.quit();
 

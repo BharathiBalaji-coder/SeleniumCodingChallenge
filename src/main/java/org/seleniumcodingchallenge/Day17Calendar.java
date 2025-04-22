@@ -78,16 +78,13 @@ Step14: Close the browser.
         WebElement dateInput = driver.findElement(By.id("cal0"));
         dateInput.click();
         driver.findElement(By.xpath("//a[@aria-label='" + tomorrowDate + "']")).click();
-        //dateInput.sendKeys(tomorrowDate);
-        //dateInput.sendKeys(Keys.ENTER);
-        //driver.findElement(By.id("closeCalendar")).click();
         Thread.sleep(3000);
         driver.findElement(By.id("travellerButton")).click();
         driver.findElement(By.id("addseniors")).click();
         driver.findElement(By.id("closeDialog")).click();
         driver.findElement(By.id("searchNow")).click();
         Thread.sleep(5000);
-        // driver.findElement(By.cssSelector("a.close-icon")).click();
+
 
         // Step 13: Write a logic to find the lowest price flight and print
         List<Double> numbers = new ArrayList<Double>();
